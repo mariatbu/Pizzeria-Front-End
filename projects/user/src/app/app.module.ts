@@ -1,24 +1,28 @@
+import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IngredientSharedModule } from 'projects/ingredient/src/app/app.module';
-import { UserSharedModule } from 'projects/user/src/app/app.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SpinnerComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    IngredientSharedModule.forRoot(),
-    UserSharedModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+@NgModule({})
+export class UserSharedModule{
+  static forRoot(): ModuleWithProviders{
+    return{
+      ngModule: AppModule, providers : []
+    }
+  }
+}
