@@ -198,6 +198,37 @@
           }
         }
       }
+    },
+    "core-library": {
+      "projectType": "library",
+      "root": "projects/core-library",
+      "sourceRoot": "projects/core-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/core-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/core-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/core-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/core-library/src/test.ts",
+            "tsConfig": "projects/core-library/tsconfig.spec.json",
+            "karmaConfig": "projects/core-library/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "PizzeriaFrontEnd"
