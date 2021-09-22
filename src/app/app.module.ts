@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { IngredientSharedModule } from 'projects/ingredient/src/app/app.module';
 import { UserSharedModule } from 'projects/user/src/app/app.module';
@@ -17,6 +18,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     AppRoutingModule,
     IngredientSharedModule.forRoot(),
     UserSharedModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
