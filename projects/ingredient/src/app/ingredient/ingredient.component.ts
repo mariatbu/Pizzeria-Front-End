@@ -10,20 +10,21 @@ import { Subscription } from 'rxjs';
 })
 export class IngredientComponent implements OnInit, OnDestroy {
   private dispose : Subscription;
-  public ingredients : Ingredient [] = null;
+  public ingredients = new Array<Ingredient>();
   public selectedIngredient : Ingredient = null;
+
   constructor(private ingredientService: IngredientService) { 
     
   }
 
   ngOnInit(): void {
-    this.subscription = this.ingredientService.getAll().subscribe((data)=>this.ingredients = data as Ingredient[]);
+    this.dispose = this.ingredientService.getAll().subscribe((data)=>this.ingredients = data);
     
   } 
 
   ngOnDestroy(): void {
 
-    this.dispose && this.dispose()
+    this.dispose && this.dispose.unsubscribe();
   }
 
 
