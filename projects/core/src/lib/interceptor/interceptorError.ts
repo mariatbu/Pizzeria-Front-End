@@ -11,7 +11,7 @@ import {tap} from 'rxjs/operators';
 import {Router} from '@angular/router';
 
 @Injectable()
-export class AuthDenied implements HttpInterceptor {
+export class InterceptorError implements HttpInterceptor {
 
   constructor(private router: Router) {}
 
@@ -19,10 +19,10 @@ export class AuthDenied implements HttpInterceptor {
     return next.handle(request).pipe( tap(() => {},
       (err: any) => {
       if (err instanceof HttpErrorResponse) {
-        if (err.status !== 403) {
+        if (err.status !== 500) {
          return;
         }
-        this.router.navigate(['login']);
+        this.router.navigate(['error']);
       }
     }));
   }
