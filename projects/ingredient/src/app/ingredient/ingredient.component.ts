@@ -9,12 +9,11 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./ingredient.component.css']
 })
 export class IngredientComponent implements OnInit, OnDestroy {
-  private dispose : Subscription;
+  private dispose : Subscription|null = null;
   public ingredients = new Array<Ingredient>();
-  public selectedIngredient : Ingredient = null;
+  public selectedIngredient : Ingredient|null = null;
 
   constructor(private ingredientService: IngredientService) { 
-    
   }
 
   ngOnInit(): void {

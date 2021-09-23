@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IngredientService } from '../services/ingredientService';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IngredientComponent } from './ingredient/ingredient.component';
 
 const providers: any[] = [IngredientService];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IngredientComponent
   ],
   imports: [
     BrowserModule,

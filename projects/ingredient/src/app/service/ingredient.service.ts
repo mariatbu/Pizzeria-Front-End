@@ -15,7 +15,6 @@ export class IngredientService {
    }
 
    getAll(): Observable<Ingredient []>{
-      //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Template_literals
       return <Observable<Ingredient[]>> this.http.get(`${this.url}/ingredients`);
    }
 
