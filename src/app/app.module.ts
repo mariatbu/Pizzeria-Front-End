@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CoreModule } from 'core';
 import { IngredientSharedModule } from 'projects/ingredient/src/app/app.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +15,9 @@ import { SpinnerComponent } from './spinner/spinner.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IngredientSharedModule.forRoot()
+    IngredientSharedModule.forRoot(),
+    CoreModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
