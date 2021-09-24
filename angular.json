@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "d74f859b-a51b-435a-8829-01dfb8b6584b"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -199,23 +202,23 @@
         }
       }
     },
-    "core-library": {
+    "core": {
       "projectType": "library",
-      "root": "projects/core-library",
-      "sourceRoot": "projects/core-library/src",
+      "root": "projects/core",
+      "sourceRoot": "projects/core/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/core-library/ng-package.json"
+            "project": "projects/core/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/core-library/tsconfig.lib.prod.json"
+              "tsConfig": "projects/core/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/core-library/tsconfig.lib.json"
+              "tsConfig": "projects/core/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -223,9 +226,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/core-library/src/test.ts",
-            "tsConfig": "projects/core-library/tsconfig.spec.json",
-            "karmaConfig": "projects/core-library/karma.conf.js"
+            "main": "projects/core/src/test.ts",
+            "tsConfig": "projects/core/tsconfig.spec.json",
+            "karmaConfig": "projects/core/karma.conf.js"
           }
         }
       }

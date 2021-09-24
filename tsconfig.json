@@ -4,9 +4,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "core-library": [
-        "dist/core-library/core-library",
-        "dist/core-library"
+      "core": [
+        "dist/core/core",
+        "dist/core"
       ]
     },
     "outDir": "./dist/out-tsc",
