@@ -8,8 +8,6 @@ import { IngredientService } from '../services/ingredientService';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IngredientComponent } from './ingredient/ingredient.component';
 
-const providers: any[] = [IngredientService];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +19,7 @@ const providers: any[] = [IngredientService];
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [IngredientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
@@ -31,7 +29,7 @@ export class IngredientSharedModule{
   static forRoot(): ModuleWithProviders{
     return{
       ngModule: AppModule, 
-      providers : providers
+      providers : [IngredientService]
     }
   }
 }
