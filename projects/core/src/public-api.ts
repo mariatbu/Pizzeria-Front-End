@@ -9,3 +9,4 @@ export * from './lib/components/button/button.component';
 export * from './lib/services/authorizationObserver';
 export * from './lib/interceptor/decoratorService';
 export * from './lib/config/config';
+export * from './lib/components/input/input.component';
