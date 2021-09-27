@@ -1,5 +1,5 @@
-<h1>Buenos días</h1>
-<app-spinner *ngIf=(condition)></app-spinner>
-<button (click)="condition=true">Encender Spinner</button>
+<h1>PIZZERÍA</h1>
+<cap-spinner *ngIf="loading$ | async"></cap-spinner>
 <lib-button></lib-button>
+<lib-input></lib-input>
 <router-outlet></router-outlet>

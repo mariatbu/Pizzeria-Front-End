@@ -6,9 +6,7 @@ import { IngredientComponent } from './ingredient.component';
 
 
 @NgModule({
-  declarations: [
-    IngredientComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     IngredientRoutingModule
