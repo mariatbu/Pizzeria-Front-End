@@ -11,8 +11,7 @@ import { InjectorDecorator } from 'projects/core/src/lib/decorators/injectordeco
 @NgModule({
   declarations: [
     AppComponent,
-    SpinnerComponent,
-    InputComponent
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

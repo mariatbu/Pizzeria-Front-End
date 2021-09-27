@@ -1,1 +1,14 @@
-<p>register works!</p>
+<div>
+    <h2>Create User</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <!-- <lib-input formControlName="name" type="text" placeholder="First Name">
+      </lib-input>
+      <lib-input formControlName="lastName" type="text" placeholder="Last Name">
+      </lib-input>
+      <lib-input formControlName="email" type="text" placeholder="Email">
+      </lib-input>
+      <lib-input formControlName="password" type="password" placeholder="Password">
+      </lib-input> -->
+      <lib-button type="submit"></lib-button>
+    </form>
+  </div>
