@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { IngredientService } from '../services/ingredientService';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IngredientComponent } from './ingredient/ingredient.component';
+import { CoreModule } from 'core';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { IngredientComponent } from './ingredient/ingredient.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CoreModule
   ],
   providers: [IngredientService],
   bootstrap: [AppComponent]
