@@ -14,7 +14,7 @@ export class IngredientService {
   constructor(public http: HttpClient) {
      
    }
-
+   
    @Authorize()
    getAll(): Observable<Ingredient []>{
       return <Observable<Ingredient[]>> this.http.get(`${this.url}/ingredients`);

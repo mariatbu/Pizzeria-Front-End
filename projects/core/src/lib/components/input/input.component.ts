@@ -9,6 +9,8 @@ export class InputComponent {
    @Input() type:String="text";
    @Input() placeholder = "text";
    @Input() label = "text";
+   @Input() name = "formName";
+   @Input() id = "formName";
 
 
 

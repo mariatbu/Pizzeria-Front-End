@@ -15,7 +15,7 @@ export class HttpInterceptorAuth implements HttpInterceptor {
             const user: UserDto = JSON.parse(localStorage.getItem('user')|| '') as UserDto; 
            
             if(user.token){
-                const modified = req.clone({ setHeaders: { 'Authorization': `${user.type} ${user.token}` }});
+                const modified = req.clone({ setHeaders: { 'Authorization': `eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoiUGF0cmljaWEiLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImlhdCI6MTYzMjg5NjIzNiwiZXhwIjoxNjMyODk5ODM2fQ.j8sasFj23cuq9Ulp0cR3lMb-i432edSbyJl4rvK2SnAcpYvRHBXIAvrN7XjN9tSrWEFVq2F5uMOK4W9uHmEtfw` }});
                 autorizationObserver.addToken = false;
                 return next.handle(modified);          
             }

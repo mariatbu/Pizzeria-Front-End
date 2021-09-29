@@ -17,7 +17,7 @@ export class UserService {
      
    }
 
-   @Authorize()
+   //@Authorize()
    addUser(body: User): Observable<UserDto>{
       return <Observable<UserDto>> this.http.post(`${this.url}/users`, body);
    }

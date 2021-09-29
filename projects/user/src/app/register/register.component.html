@@ -1,14 +1,14 @@
 <div>
     <h2>Create User</h2>
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-      <!-- <lib-input formControlName="name" type="text" placeholder="First Name">
+      <lib-input formControlName="name" label="" type="text" placeholder="First Name" name="userForm" id="userForm">
       </lib-input>
-      <lib-input formControlName="lastName" type="text" placeholder="Last Name">
+      <lib-input formControlName="lastName" label="" type="text" placeholder="Last Name">
       </lib-input>
-      <lib-input formControlName="email" type="text" placeholder="Email">
+      <lib-input formControlName="email" label="" type="text" placeholder="Email">
       </lib-input>
-      <lib-input formControlName="password" type="password" placeholder="Password">
-      </lib-input> -->
-      <lib-button type="submit"></lib-button>
+      <lib-input formControlName="password" label="" type="password" placeholder="Password">
+      </lib-input>
+      <lib-button type="submit" informationText="Registrar"></lib-button>
     </form>
   </div>
