@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { IngredientService } from '../services/ingredientService';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IngredientComponent } from './ingredient/ingredient.component';
+import { SingleIngredientComponent } from './single-ingredient/single-ingredient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IngredientComponent
+    IngredientComponent,
+    SingleIngredientComponent
   ],
   imports: [
     BrowserModule,

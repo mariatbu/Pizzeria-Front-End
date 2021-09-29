@@ -13,6 +13,7 @@ import { InjectorDecorator } from 'projects/core/src/lib/decorators/injectordeco
     AppComponent,
     SpinnerComponent,
     InputComponent
+   
   ],
   imports: [
     BrowserModule,
