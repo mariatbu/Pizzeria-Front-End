@@ -1,0 +1,12 @@
+<h2>Login</h2>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+        <lib-input formControlName="email" type="text" placeholder="Usuario"></lib-input>
+    </div>
+
+    <div>
+        <lib-input formControlName="password" type="password" placeholder="contraseña"></lib-input>
+    </div>
+
+    <button type="submit" [disabled]="!userForm.valid">Login</button>
+</form>

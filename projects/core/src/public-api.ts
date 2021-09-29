@@ -10,3 +10,4 @@ export * from './lib/services/authorizationObserver';
 export * from './lib/interceptor/decoratorService';
 export * from './lib/config/config';
 export * from './lib/services/idb.service'
+export * from './lib/components/input/input.component';
