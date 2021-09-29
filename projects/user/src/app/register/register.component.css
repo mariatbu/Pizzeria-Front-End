@@ -1,0 +1,11 @@
+form{
+    display:grid;
+	gap:1.25rem;
+    
+}
+.container{
+    grid-template-columns: 50% 2fr;
+}
+.left-side{
+    background-color: var(--red-red-600);
+}
