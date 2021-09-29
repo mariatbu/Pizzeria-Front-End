@@ -1,4 +1,4 @@
-import { UserDto } from "dist/core/lib/user/userDto";
+import { UserDto } from "./userDto";
 const key = "user";
 
 class UserStorage{
