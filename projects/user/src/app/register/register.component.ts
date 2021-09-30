@@ -24,6 +24,7 @@ export class RegisterComponent implements OnInit{
     const user = this.userForm.value;
     if(this.userForm.valid){
       const observer = this.userService.addUser(user);
+      alert("Usuario creado!");
       const unsubscribe = observer.subscribe(async (data)=>{
         await userStorage.addUser(data);
         this.router.navigate(["login"]);

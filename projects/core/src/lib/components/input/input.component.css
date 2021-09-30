@@ -1,4 +1,20 @@
-div{
+.container{
     display: grid;
-    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25 rem;
+    width:100%;
+}
+
+.input-container{
+    font-family: Quicksand;
+    font-size: 18px;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: solid 1px var(--gray-gray-500);
+    background-color: var(--white); 
+}
+
+input{
+    border: none;
+    outline: none;
 }
