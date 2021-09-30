@@ -15,7 +15,7 @@ export class IngredientService {
      
    }
    
-   @Authorize()
+   //@Authorize()
    getAll(): Observable<Ingredient []>{
       return <Observable<Ingredient[]>> this.http.get(`${this.url}/ingredients`);
    }

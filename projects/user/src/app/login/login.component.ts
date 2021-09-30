@@ -11,8 +11,6 @@ import { UserService } from '../services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router) { }
-
   userForm = new FormGroup({
     email: new FormControl('', [Validators.required]),
     password: new FormControl('', Validators.required)
@@ -22,6 +20,8 @@ export class LoginComponent implements OnInit {
     email: "",
     password: ""
   }
+
+  constructor(private userService: UserService, private router: Router) { }
 
   onSubmit(){
     
