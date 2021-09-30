@@ -1,4 +1,9 @@
-<div>
-    <label for>{{label}}</label>
-    <input type="{{type}}" placeholder="{{placeholder}}">
+<div class="container" [formGroup]="formGroup">
+    <label for="{{name}}">{{label}}</label>
+    <div class="input-container" [formGroup]="formGroup">
+        <input id="{{name}}" 
+        [formControlName]="name" 
+        type="{{type}}" 
+        placeholder="{{placeholder}}">
+    </div>
 </div>

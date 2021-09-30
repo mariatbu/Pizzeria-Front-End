@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div>
     <h2>Create User</h2>
     <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
@@ -13,3 +14,20 @@
     </form>
     <lib-button></lib-button>
   </div>
+=======
+  <div>
+      <h2 class="title">¿Quieres Registrarte?</h2>
+      <form  (ngSubmit)="onSubmit()">
+        <lib-input [formGroup]="userForm" name="name" label="" type="text" placeholder="Nombre">
+        </lib-input>
+        <lib-input [formGroup]="userForm" name="lastName" label="" type="text" placeholder="Apellidos">
+        </lib-input>
+        <lib-input  [formGroup]="userForm" name="email" label="" type="text" placeholder="Email">
+        </lib-input>
+        <lib-input [formGroup]="userForm" name="password" label="" type="password" placeholder="Contraseña">
+        </lib-input>
+        <lib-button type="submit" text="Regístrate" (btnClick)="onSubmit()"></lib-button>
+      </form>
+  </div>
+
+>>>>>>> 30923fe6c43a2d329d70d0e9165e18bd240243ed

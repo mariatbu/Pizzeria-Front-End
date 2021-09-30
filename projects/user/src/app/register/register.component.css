@@ -1,0 +1,23 @@
+form{
+    display:grid;
+	gap:1.25rem;
+    margin-top: 2.5rem;
+    
+}
+.container{
+    width:100%;
+}
+.left-side{
+    background-color: var(--red-red-600);
+}
+
+.title{
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: left;
+    color: var(--black);
+}

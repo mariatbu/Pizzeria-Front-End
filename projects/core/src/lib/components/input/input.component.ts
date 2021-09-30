@@ -1,4 +1,5 @@
 import { Component, Input} from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'lib-input',
@@ -9,4 +10,6 @@ export class InputComponent {
    @Input() type:String="text";
    @Input() placeholder = "text";
    @Input() label = "text";
+   @Input() formGroup: FormGroup|any;
+   @Input() name: String | any;
 }

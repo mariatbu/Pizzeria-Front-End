@@ -11,9 +11,6 @@ import userStorage from 'projects/core/src/lib/user/userStorage';
 })
 export class RegisterComponent implements OnInit{
 
-
-  constructor(private userService: UserService, private router: Router) { }
-
   userForm = new FormGroup({
     name: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
@@ -21,12 +18,19 @@ export class RegisterComponent implements OnInit{
     password: new FormControl('', Validators.required),
   });
 
+  constructor(private userService: UserService, private router: Router) { }
+
   onSubmit(){
-    const observer = this.userService.addUser(this.userForm.value);
-    const unsubscribe = observer.subscribe(async (data)=>{
-      await userStorage.addUser(data);
-      this.router.navigate([""]);
-    })
+    const user = this.userForm.value;
+    if(this.userForm.valid){
+      const observer = this.userService.addUser(user);
+      const unsubscribe = observer.subscribe(async (data)=>{
+        await userStorage.addUser(data);
+        this.router.navigate(["login"]);
+      })
+      alert("Usuario creado");
+    }
+
   }
 
   ngOnInit(): void {
