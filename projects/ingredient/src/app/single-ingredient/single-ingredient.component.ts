@@ -1,25 +1,30 @@
 import { Component, OnInit } from '@angular/core';
+import { Ingredient } from '../ingredient/ingredient';
+import { IngredientService } from '../service/ingredient.service';
 
 @Component({
   selector: 'app-single-ingredient',
   templateUrl: './single-ingredient.component.html',
   styleUrls: ['./single-ingredient.component.css']
 })
-export class SingleIngredientComponent  {
-  name = 'Single Ingredient';
-  ingredientArray = [{name:"a"}, {name:""}, {name:"b"}, {name:"c"}];
+export class SingleIngredientComponent implements OnInit {
+  
+  ingredients?: Ingredient[]
+
+  constructor(private http2Server: IngredientService) { }
 
   ngOnInit() {
-      this.addNewIngredient();
+    this.getIngredients();
   }
 
-  addNewIngredient() {
-      this.ingredientArray.forEach((currentValue) => {
-        if(currentValue.name) {
-            this.ingredientArray.push([{''}]);
-        }
-      });
+  private getIngredients(){
+    this.http2Server.getAll().subscribe(
+      ingredientData => { this.ingredients = ingredientData }
+    )
+
   }
+
+ 
 
 
 
