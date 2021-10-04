@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http'
-import { Ingredient } from '../ingredient/ingredient';
+import { Ingredient } from './ingredient';
 import { environment } from '../../../../../src/environments/environment';
 import { Observable } from 'rxjs';
 import { Authorize } from 'projects/core/src/public-api';

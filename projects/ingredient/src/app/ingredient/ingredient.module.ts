@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { IngredientRoutingModule } from './ingredient-routing.module';
-import { IngredientComponent } from './ingredient.component';
-
+import { SingleIngredientComponent } from '../single-ingredient/single-ingredient.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SingleIngredientComponent,
+  ],
+
+  exports: [
+    SingleIngredientComponent,
+  ], 
+
   imports: [
     CommonModule,
-    IngredientRoutingModule
   ]
 })
 export class IngredientModule { }

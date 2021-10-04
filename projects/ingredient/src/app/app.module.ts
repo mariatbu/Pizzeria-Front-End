@@ -8,6 +8,9 @@ import { IngredientService } from '../services/ingredientService';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IngredientComponent } from './ingredient/ingredient.component';
 import { SingleIngredientComponent } from './single-ingredient/single-ingredient.component';
+import { IngredientModule } from './ingredient/ingredient.module';
+
+const providers: any[] = [IngredientService];
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { SingleIngredientComponent } from './single-ingredient/single-ingredient
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IngredientModule
   ],
   providers: [IngredientService],
   bootstrap: [AppComponent]
@@ -31,7 +35,7 @@ export class IngredientSharedModule{
   static forRoot(): ModuleWithProviders{
     return{
       ngModule: AppModule, 
-      providers : [IngredientService]
+      providers : providers
     }
   }
 }

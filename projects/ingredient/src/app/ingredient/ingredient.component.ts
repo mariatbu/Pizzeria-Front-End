@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Ingredient } from './ingredient';
+import { Ingredient } from '../service/ingredient';
 import { IngredientService } from '../service/ingredient.service';
 import { Subscription } from 'rxjs';
 
@@ -24,6 +24,10 @@ export class IngredientComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
 
     this.dispose && this.dispose.unsubscribe();
+  }
+
+  handlerclick(ev:any){ 
+
   }
 
 
