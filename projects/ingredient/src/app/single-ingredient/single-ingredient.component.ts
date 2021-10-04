@@ -7,6 +7,7 @@ import { Actions } from '../service/actions';
   templateUrl: './single-ingredient.component.html',
   styleUrls: ['./single-ingredient.component.css']
 })
+
 export class SingleIngredientComponent {
   
   @Input() ingredient: Ingredient | any

@@ -16,7 +16,6 @@ const providers: any[] = [IngredientService];
   declarations: [
     AppComponent,
     IngredientComponent,
-    SingleIngredientComponent
   ],
   imports: [
     BrowserModule,
