@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { FormControl, FormGroup, ValidationErrors } from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup, FormControl, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'lib-checkbox',
@@ -8,20 +8,19 @@ import { FormControl, FormGroup, ValidationErrors } from '@angular/forms';
 })
 export class CheckboxComponent {
 
-  @Input() text: string ='';
-  @Input() formGroup:FormGroup|any;
-  @Input() name:string|any
-  
-  constructor() { }
+  @Input() text: String="";
+  @Input() formGroup: FormGroup | any;
+  @Input() name : String | any;
 
-  private get control(): FormControl | any{
-    return this.formGroup && this.formGroup.get(this.name)
+  private get control() : FormControl | any{
+    return this.formGroup && this.formGroup.get(this.name);
   }
-  get errors(): ValidationErrors | null{
-    return  this.control?.errors
+
+  get errors() : ValidationErrors | null {
+    return this.control?.errors;
   }
+
   get dirty(): boolean{
-    return this.control?.dirty
+    return this.control?.dirty;
   }
-
 }

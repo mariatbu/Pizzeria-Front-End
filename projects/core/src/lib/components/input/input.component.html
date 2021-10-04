@@ -6,4 +6,5 @@
         type="{{type}}" 
         placeholder="{{placeholder}}">
     </div>
+    <cap-error *ngIf="dirty && errors" [errors]="errors"></cap-error>
 </div>

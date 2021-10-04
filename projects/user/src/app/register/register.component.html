@@ -9,6 +9,8 @@
         </lib-input>
         <lib-input [formGroup]="userForm" name="password" label="" type="password" placeholder="Contraseña">
         </lib-input>
+        <checkbox class="check" [formGroup]="userForm" name = "policies" text ="He leído y acepto la Política de Privacidad"></checkbox>
+        <checkbox class="check" [formGroup]="userForm" name = "consent" text ="Sí, acepto recibir comunicaciones comerciales y ofertas personalizadas según mi perfil."></checkbox>
         <lib-button type="submit" text="Regístrate" (btnClick)="onSubmit()"></lib-button>
       </form>
   </div>

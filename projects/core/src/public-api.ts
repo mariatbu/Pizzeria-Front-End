@@ -12,4 +12,6 @@ export * from './lib/interceptor/decoratorService';
 export * from './lib/config/config';
 export * from './lib/services/idb.service'
 export * from './lib/components/input/input.component';
-export * from './lib/components/checkbox/checkbox.component'
+export * from './lib/components/checkbox/checkbox.component';
+export * from './lib/components/menu/menu.component';
+export * from './lib/components/checkbox/checkbox.component';

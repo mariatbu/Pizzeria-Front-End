@@ -3,4 +3,5 @@
     [formControlName]="name"
     id={{name}} >
     <span>{{text}}</span>
+<cap-error *ngIf="dirty && errors" [errors]="errors"></cap-error>
 </div>

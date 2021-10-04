@@ -5,13 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CoreModule } from 'core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { UserComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    UserComponent,
     LoginComponent,
     RegisterComponent
   ],
@@ -24,6 +24,6 @@ import { RegisterComponent } from './register/register.component';
     CoreModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [UserComponent]
 })
 export class AppModule { }
