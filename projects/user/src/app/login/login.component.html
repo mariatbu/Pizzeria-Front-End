@@ -8,5 +8,15 @@
         <lib-input formControlName="password" type="password" placeholder="contraseña"></lib-input>
     </div>
 
-    <button type="submit" [disabled]="!userForm.valid">Login</button>
+    <div>
+        <button type="submit" [disabled]="!userForm.valid">Login</button>
+    </div>
+
+    <div>
+        <button (click)="signInWithGoogle()">Iniciar sesión con Google</button>
+    </div>
+
+    <div>
+        <button (click)="signInWithFB()">Iniciar sesión con Facebook</button>
+    </div>
 </form>
